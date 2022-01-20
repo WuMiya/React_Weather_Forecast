@@ -11,7 +11,10 @@ async function getForecastData(setData) {
 }
 
 export default function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({
+    location: { name: "" },
+    forecast: { forecastday: [] }
+  });
 
   useEffect(() => {
     getForecastData(setData);

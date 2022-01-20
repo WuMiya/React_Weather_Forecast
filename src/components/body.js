@@ -1,6 +1,5 @@
 export const Body = (props) => {
   const data = props.forecastData.forecastday;
-  console.log(data);
   return (
     <div className="App">
       <table>
