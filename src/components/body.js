@@ -1,8 +1,8 @@
 export const Body = (props) => {
   const data = props.forecastData.forecastday;
   return (
-    <div className="App">
-      <table>
+    <div>
+      <table className="table table-bordered text-center">
         <tr>
           <th>Date</th>
           <th>最高溫</th>

@@ -3,6 +3,8 @@ import { Body } from "./components/body";
 import { Header } from "./components/header";
 import { API_URL } from "./dataService/apiData";
 import { useEffect, useState } from "react";
+import { City } from "./components/city";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 async function getForecastData(setData) {
   const tmp = await fetch(API_URL);
@@ -24,6 +26,7 @@ export default function App() {
   return (
     <div className="App">
       <Header forecastData={data.location} />
+      <City forecastData={data.location} />
       <Body forecastData={data.forecast} />
     </div>
   );
