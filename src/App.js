@@ -9,12 +9,13 @@ async function getForecastData(setData) {
   const result = await tmp.json();
   setData(result);
 }
+const defaultData = {
+  location: { name: " " },
+  forecast: { forecastday: [] }
+};
 
 export default function App() {
-  const [data, setData] = useState({
-    location: { name: "" },
-    forecast: { forecastday: [] }
-  });
+  const [data, setData] = useState(defaultData);
 
   useEffect(() => {
     getForecastData(setData);
